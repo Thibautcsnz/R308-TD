@@ -26,3 +26,18 @@ liste=[1,20,2,50,2,55,9]
 dico={0:"jean", 1:"pierre", 2:"michelle"}
 print(len(dico))
 dict(dico)
+
+#autre programme
+def afficher_dictionnaire(dictionnaire, prefixe=""):
+    """
+    Affiche l'ensemble des données d'un dictionnaire avec un préfixe.
+
+    :param dictionnaire: Le dictionnaire à afficher.
+    :param prefixe: La chaîne de caractères à afficher avant chaque élément (par défaut, vide).
+    """
+    for cle, valeur in dictionnaire.items():
+        print(f"{prefixe}{cle}: {valeur}")
+
+# Exemple d'utilisation de la fonction
+donnees = {"nom": "Thibaut", "age": 19, "ville": "Kaysersberg"}
+afficher_dictionnaire(donnees, "Donnée: ")

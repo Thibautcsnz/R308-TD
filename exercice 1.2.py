@@ -14,12 +14,24 @@ def nombre (a : int, b : int) -> int:
 nombre(int, int)
 
 #autre programme
-def plus_grand_nbr (valeur1, valeur2):
 
-    if valeur1 < valeur2:
-        print(f'le plus grand est {valeur2}')
-    else:
-        print(f'le plus grand est {valeur1}')
+def plus_grand_nombre_reel(nombre1: float, nombre2: float) -> float:
+    """
+    Retourne le plus grand des deux nombres réels donnés en entrée.8
+    :param nombre1: Le premier nombre réel.
+    :param nombre2: Le deuxième nombre réel.
+    :return: Le plus grand nombre réel entre nombre1 et nombre2.
+    """
+    return max(nombre1, nombre2)
 
-plus_grand_nbr(valeur1, valeur2)
+# Demander à l'utilisateur d'entrer deux nombres réels
+nombre1 = float(input("Entrez le premier nombre réel : "))
+nombre2 = float(input("Entrez le deuxième nombre réel : "))
+
+# Appeler la fonction plus_grand_nombre_reel avec les nombres saisis par l'utilisateur
+resultat = plus_grand_nombre_reel(nombre1, nombre2)
+
+# Afficher le résultat
+print("Le plus grand nombre réel est :", resultat)
+
 
