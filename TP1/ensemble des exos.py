@@ -2,13 +2,17 @@
 +-------------------+
 | Point |
 +-------------------+
-| - x: float |
-| - y: float |
+| -__x: float |
+| -__y: float |
 +-------------------+
-| + Point() |
-| + Point(x: float, y: float) |
-| + distance(x: float, y: float): float |
-| + distance(p = Point): float |
+| +__init__(x=0, y=0) |
+| +__str__() |
+| +get_x() |
+| +get_y() |
+| +set_x(new_x) |
+| +set_y(new_y) |
+| +distance(a: float, b: float): float |
+| +distance_to(other_point: Point): float |
 +-------------------+
 """
 import math
@@ -52,20 +56,23 @@ print(point1)  # Affiche les distances à l'aide de la méthode __str__
 
 print("------------------------------------")
 """
-+-------------------+
-| Cercle |
-+-------------------+
-| - centre: Point |
-| - rayon: float |
-+-------------------+
-| + Cercle(rayon: float) |
-| + Cercle(centre: Point, rayon: float) |
-| + diametre(): float |
-| + perimetre(): float |
-| + surface(): float |
-| + intersection_autre_cercle(autre_cercle: Cercle): bool |
-| + point_dans_cercle(point: Point): bool |
-+-------------------+
+    +-------------------+
+    |      Cercle       |
+    +-------------------+
+    | -__centre: Point  |
+    | -__rayon: float   |
+    +-------------------+
+    | +__init__(centre: Point = None, rayon: float = 0) |
+    | +get_rayon(): float |
+    | +set_rayon(new_rayon: float) |
+    | +get_centre(): Point |
+    | +set_centre(new_centre: Point) |
+    | +diametre(): float |
+    | +perimetre(): float |
+    | +surface(): float |
+    | +intersection_autre_cercle(autre_cercle: Cercle): bool |
+    | +point_dans_cercle(point: Point): bool |
+    +-------------------+
 """
 #Classe cercle
 class Cercle:
@@ -129,25 +136,24 @@ else:
     print("Le point_test n'est pas à l'intérieur de cercle1.")
 
 print("------------------------------------")
-"""
-  +-----------------------+
-  |       Rectangle      |
-  +-----------------------+
-  | - bas_gauche: Point  |
-  | - longueur: float    |
-  | - hauteur: float     |
-  +-----------------------+
-  | + Rectangle()                      |
-  | + Rectangle(longueur: float, hauteur: float) |
-  | + Rectangle(bas_gauche: Point, haut_droit: Point) |
-  | + surface(): float |
-  | + perimetre(): float |
-  | + position_bas_gauche(): Point |
-  | + position_bas_droit(): Point |
-  | + position_haut_gauche(): Point |
-  | + position_haut_droit(): Point |
-  | + point_dans_rectangle(point: Point): bool |
-  +-----------------------+
+
+"""    
+    +-------------------+
+    |     Rectangle     |
+    +-------------------+
+    | -__bas_gauche: Point |
+    | -__longueur: float  |
+    | -__hauteur: float  |
+    +-------------------+
+    | +__init__(bas_gauche: Point = Point(), longueur: float = 1, hauteur: float = 1) |
+    | +surface(): float  |
+    | +perimetre(): float |
+    | +get_position_bas_gauche(): Point |
+    | +get_position_bas_droit(): Point |
+    | +get_position_haut_gauche(): Point |
+    | +get_position_haut_droit(): Point |
+    | +point_dans_rectangle(point: Point): bool |
+    +-------------------+
 """
 #Classe Rectangle
 class Rectangle:
@@ -200,20 +206,22 @@ else:
 print("------------------------------------")
 
 """
-  +-----------------------+
-  |   TriangleRectangle  |
-  +-----------------------+
-  | - cote1: float       |
-  | - cote2: float       |
-  | - angle_droit: Point|
-  +-----------------------+
-  | + TriangleRectangle(cote1: float, cote2: float) |
-  | + TriangleRectangle(cote1: float, cote2: float, angle_droit: Point) |
-  | + hypothenuse(): float |
-  | + perimetre(): float |
-  | + surface(): float |
-  | + est_isocèle(): bool |
-  +-----------------------+
+    +------------------------+
+    |  TriangleRectangle    |
+    +------------------------+
+    | -__cote1: float       |
+    | -__cote2: float       |
+    | -__angle_droit: Point |
+    +------------------------+
+    | +__init__(cote1, cote2, angle_droit: Point = Point()) |
+    | +hypothenuse(): float |
+    | +perimetre(): float   |
+    | +surface(): float     |
+    | +est_isocèle(): bool  |
+    | +get_cote1(): float   |
+    | +get_cote2(): float   |
+    | +get_angle_droit(): Point |
+    +------------------------+
 
 """
 # Classe TriangleRectangle
