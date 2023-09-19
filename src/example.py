@@ -2,8 +2,8 @@ def affiche(chaine):
     """
     Affiche une chaîne de caractères précédée de "texte à afficher :".
 
-    :param chaine: La chaîne de caractères à afficher.
-    :type chaine: str
+    :param: chaine: La chaîne de caractères à afficher.
+    :type: chaine: str
 
     :return: Aucune valeur de retour.
     :rtype: None
